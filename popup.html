@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TTD Form Filler</title>
+
+    <style>
+      body {
+        min-width: 320px;
+      }
+      label {
+        font-size: 14;
+        display: block;
+        text-transform: capitalize;
+        margin-bottom: 8px;
+      }
+      fieldset {
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 6px;
+        min-width: 120px;
+      }
+      #fill-btn {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="fill-btn" type="button">Fill</button>
+
+    <form>
+      <h2>General Details</h2>
+      <label>
+        email
+        <input type="email" name="pilgrimEmail" />
+      </label>
+      <label>
+        city
+        <input type="text" name="pilgrimCity" />
+      </label>
+      <label>
+        state
+        <input type="text" name="pilgrimState" />
+      </label>
+      <label>
+        country
+        <input type="text" name="pilgrimCountry" />
+      </label>
+      <label>
+        pincode
+        <input type="text" name="pilgrimPincode" />
+      </label>
+
+      <h2>Pilgrim Details</h2>
+      <fieldset data-index="0">
+        <legend>Pilgrim 1</legend>
+        <label>
+          name
+          <input type="text" name="p0-name" />
+        </label>
+        <label>
+          age
+          <input type="number" min="0" name="p0-age" />
+        </label>
+        <label>
+          gender
+          <select name="p0-gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Transgender">Transgender</option>
+          </select>
+        </label>
+        <label>
+          photo id proof
+          <select name="p0-idType">
+            <option value="Aadhaar Card">Aadhaar Card</option>
+            <option value="Passport">Passport</option>
+          </select>
+        </label>
+        <label>
+          photo id number
+          <input type="text" name="p0-idNumber" />
+        </label>
+      </fieldset>
+
+      <fieldset data-index="1">
+        <legend>Pilgrim 2</legend>
+        <label>
+          name
+          <input type="text" name="p1-name" />
+        </label>
+        <label>
+          age
+          <input type="number" min="0" name="p1-age" />
+        </label>
+        <label>
+          gender
+          <select name="p1-gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Transgender">Transgender</option>
+          </select>
+        </label>
+        <label>
+          photo id proof
+          <select name="p1-idType">
+            <option value="Aadhaar Card">Aadhaar Card</option>
+            <option value="Passport">Passport</option>
+          </select>
+        </label>
+        <label>
+          photo id number
+          <input type="text" name="p1-idNumber" />
+        </label>
+      </fieldset>
+
+      <button type="submit">Save</button>
+      <button type="reset">Clear</button>
+    </form>
+    <script src="popup.js"></script>
+  </body>
+</html>
